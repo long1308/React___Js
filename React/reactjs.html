@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17.0.0/umd/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.production.min.js"
+    ></script>
+  </head>
+  <body></body>
+  <script>
+    // //bài 1
+    // //DOM
+    // const h1DOME = document.createElement("h1");
+    // h1DOME.title = "Hello";
+    // h1DOME.className = "heading";
+    // h1DOME.innerText = "Hello guys";
+    // document.body.appendChild(h1DOME);
+    // //react
+    // const h1React = react.createElement(
+    //   "h1",
+    //   {
+    //     title: "Hello react",
+    //     className: "Heading",
+    //   },
+    //   "Hello guys"
+    // );
+
+    // //bài 2
+    // //DOM
+    // const ulDOME = document.createElement("ul");
+    // const liDOME1 = document.createElement("li");
+    // liDOME1.innerText = "jAVASCRIPT";
+
+    // const liDOME2 = document.createElement("li");
+    // liDOME2.innerText = "REACT JS";
+
+    // ulDOME.appendChild(liDOME1);
+    // ulDOME.appendChild(liDOME2);
+    // document.body.appendChild(ulDOME);
+    // // REACT JS
+    // const ulReact = React.createElement(
+    //   "ul",
+    //   null,
+    //   React.createElement("li", null, "Javascript"),
+    //   React.createElement("li", null, "React JS")
+    // );
+    // console.log(ulReact);
+
+    //bài 3
+    //DOM
+    const divDOME = document.createElement("div");
+    const h2DOME = document.createElement("h2");
+    h2DOME.innerText = "Hoc React JS";
+    h2DOME.title = "Hoc React JS Tai F8";
+
+    const pDOME = document.createElement("p");
+    pDOME.innerText = "hOC lOP Trinh";
+
+    divDOME.appendChild(h2DOME);
+    divDOME.appendChild(pDOME);
+
+    document.body.appendChild(divDOME);
+
+    const divReact = React.createElement(
+      "div",
+      null,
+      React.createElement(
+        "h2",
+        { title: "Hoc React JS Tai F8" },
+        "Hoc React JS"
+      ),
+      React.createElement("p", null, "hOC lOP Trinh")
+    );
+  </script>
+</html>

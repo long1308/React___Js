@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <script
+      crossorigin
+      src="https://unpkg.com/react@17.0.0/umd/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.production.min.js"
+    ></script> -->
+
+    <!-- react @18 -->
+
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script>
+    // const divDOME = document.createElement("div");
+    // const h2DOME = document.createElement("h2");
+    // h2DOME.innerText = "Hoc React JS";
+    // h2DOME.title = "Hoc React JS Tai F8";
+
+    // const pDOME = document.createElement("p");
+    // pDOME.innerText = "hOC lOP Trinh";
+
+    // divDOME.appendChild(h2DOME);
+    // divDOME.appendChild(pDOME);
+
+    // document.body.appendChild(divDOME);
+
+    const divReact = React.createElement(
+      "div",
+      { className: "post-item" },
+      React.createElement(
+        "h2",
+        { title: "Hoc React JS Tai F8" },
+        "Hoc React JS"
+      ),
+      React.createElement("p", null, "hOC lOP Trinh")
+    );
+    console.log(divReact);
+    //react @17
+    //get root element
+    // const root = document.getElementById("root");
+    // ReactDOM.render(divReact, root);
+
+    //react @18
+    const container = document.getElementById("root");
+    const root = ReactDOM.createRoot(container);
+    root.render(divReact);
+  </script>
+</html>

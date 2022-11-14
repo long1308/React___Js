@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17.0.0/umd/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.production.min.js"
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      function PostItem(props) {
+        // props.callback(Math.random());
+        return (
+          <div className="posts-item">
+            <img src={props.image} alt="" width="200px" height="100px" />
+            <h2 className="post-title">{props.title}</h2>
+            <p className="post-description">{props.description}</p>
+            <p className="post-publisher">{props.publisher}</p>
+          </div>
+        );
+      }
+
+      function App() {
+        return (
+          <div className="posts-list">
+            <PostItem
+              image="https://files.fullstack.edu.vn/f8-prod/blog_posts/5068/634273758a67b.jpg"
+              title="Hoc Lap trinh de di lam"
+              description="Hoc nua hoc mai"
+              publisher="1 day ago"
+              // callback={(random) => {
+              //   console.log(random);
+              // }}
+            />
+
+            <PostItem
+              image="https://94now.com/static/version1612413959/frontend/94Now/default/vi_VN/images/logo.svg"
+              title="Hoc Lap trinh de di lam viec"
+              description="Hoc nua hoc mai de thanh cong"
+              publisher="3 day ago"
+            />
+          </div>
+        );
+      }
+
+      ReactDOM.render(<App />, document.getElementById("root"));
+    </script>
+  </body>
+</html>

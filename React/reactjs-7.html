@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17.0.0/umd/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.production.min.js"
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      const courses = [
+        {
+          title: "Kiến Thức Nhập Môn IT",
+          description:
+            "Để có cái nhìn tổng quan về ngành IT - Lập trình web các bạn nên xem các videos tại khóa này trước nhé.",
+          amount: 56546,
+          image: "https://files.fullstack.edu.vn/f8-prod/courses/7.png",
+        },
+        {
+          title: "HTML CSS từ Zero đến Hero",
+          description:
+            "Trong khóa này chúng ta sẽ cùng nhau xây dựng giao diện 2 trang web là The Band & Shopee.",
+          amount: 435735,
+          image: "https://files.fullstack.edu.vn/f8-prod/courses/2.png",
+        },
+        {
+          title: "Responsive Với Grid System",
+          description:
+            "Trong khóa này chúng ta sẽ học về cách xây dựng giao diện web responsive với Grid System, tương tự Bootstrap 4.",
+          amount: 231225,
+          image: "https://files.fullstack.edu.vn/f8-prod/courses/3.png",
+        },
+        {
+          title: "Kiến Thức Nhập Môn IT",
+          description:
+            "Để có cái nhìn tổng quan về ngành IT - Lập trình web các bạn nên xem các videos tại khóa này trước nhé.",
+          amount: 56546,
+          image: "https://files.fullstack.edu.vn/f8-prod/courses/7.png",
+        },
+        {
+          title: "HTML CSS từ Zero đến Hero",
+          description:
+            "Trong khóa này chúng ta sẽ cùng nhau xây dựng giao diện 2 trang web là The Band & Shopee.",
+          amount: 435735,
+          image: "https://files.fullstack.edu.vn/f8-prod/courses/2.png",
+        },
+        {
+          title: "Responsive Với Grid System",
+          description:
+            "Trong khóa này chúng ta sẽ học về cách xây dựng giao diện web responsive với Grid System, tương tự Bootstrap 4.",
+          amount: 231225,
+          image: "https://files.fullstack.edu.vn/f8-prod/courses/3.png",
+        },
+      ];
+      //   function CouserItem(props) {
+      //     return (
+      //       <div className="item">
+      //         <h1>{props.title}</h1>
+      //         <p>{props.description}</p>
+      //         <img src={props.image} alt="" />
+      //       </div>
+      //     );
+      //   }
+
+      function CouserItem({ title, description, image, onClick }) {
+        return (
+          <div className="item">
+            <h1>{title}</h1>
+            <p>{description}</p>
+            <img onClick={onClick} src={image} alt="" />
+          </div>
+        );
+      }
+
+      function App() {
+        const handleClick = () => {
+          alert("Hello");
+        };
+        return courses.map((course) => {
+          return (
+            <div className="list-items">
+              <CouserItem
+                title={course.title}
+                description={course.description}
+                image={course.image}
+                onClick={handleClick}
+              />
+            </div>
+          );
+        });
+      }
+      ReactDOM.render(<App />, document.getElementById("root"));
+    </script>
+  </body>
+</html>
