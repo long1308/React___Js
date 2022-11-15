@@ -1,5 +1,5 @@
 import React from "react"; // nạp thư viện react
-import ReactDOM from "react-dom/client"; // nạp thư viện react-dom
+import ReactDOM from "react-dom"; // nạp thư viện react-dom
 
 // Tạo component App
 function App() {
